@@ -1,0 +1,27 @@
+# node definition
+
+t:person [
+    p:id
+    f:location_id
+    :name
+    :age
+    :sex
+    :lang_id
+]
+
+t:location [
+    p:id
+    :name
+    :latitude
+    :longitude
+]
+
+t:language [
+    p:id
+    :name
+]
+# edge definition
+
+person:location_id *--1..n location:id
+person:lang_id 1--1..n language:id
+
